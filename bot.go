@@ -14,7 +14,7 @@ type Bot struct {
 
 func createBot() (*Bot, error) {
 	bot := &Bot{}
-	token:= os.Getenv("API_KEY")
+	token := os.Getenv("API_KEY")
 	poller := bot.MakePoller(os.Getenv("POLLER_MODE"))
 
 	pref := tele.Settings{

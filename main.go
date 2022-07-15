@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 
-	tele "gopkg.in/telebot.v3"
 	env "github.com/joho/godotenv"
 )
 
@@ -20,10 +19,6 @@ func main() {
 		log.Fatal(err)
 		return
 	}
-
-	bot.Handle("/hello", func(c tele.Context) error {
-		return c.Send("Hello!")
-	})
 
 	bot.SetUpHandlers()
 	bot.Start()
